@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.4">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>5</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Demo Jan-Apr Vendors.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="F1" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Vendors Report" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F3" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F4" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F5" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="F6" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F7" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F8" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F9" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F10" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="F11" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="F12" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F13" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F14" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F15" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F16" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F17" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F18" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F19" size="255" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="F20" source="File: C:\Users\91970\Desktop\Alteryx Projects\Power Query\Demo Jan-Apr Vendors.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="150" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[F1] != "Totals"</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Removing Totals</AnnotationText>
+          <DefaultAnnotationText>[F1] != "Totals"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="258" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[[F12] != "-------------" AND
+[F13] != "-------------" AND
+[F14] != "-------------" AND
+[F14] != "-------------" AND
+[F15] != "-------------" AND
+[F16] != "-------------" AND
+[F17] != "-------------" AND
+[F18] != "-------------" AND
+[F19] != "-------------"
+
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Removing Lines</AnnotationText>
+          <DefaultAnnotationText>[F12] != "-------------" AND
+[F13] != "-------------" AND
+[F14] != "------------...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="354" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="True" />
+          <UpdateField_Name>Vendors Report</UpdateField_Name>
+          <CreateField_Name>New Field</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>IF ISNULL([Vendors Report])
+THEN [Row-1:Vendors Report]
+ELSE [Vendors Report]
+ENDIF</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Vendor Name Fill Down</AnnotationText>
+          <DefaultAnnotationText>IF ISNULL([Vendors Report])
+THEN [Row-1:Vendors Report]
+ELSE ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="450" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[F1]+[Vendors Report]" field="Vendor Name" size="1073741823" type="V_WString" />
+            <FormulaField expression="[F4]+ToString([F5])" field="GL Account" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Merged Columns</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Vendor Name = [F1]+[Vendors Report]
+GL Account = [F4]+ToString([F5])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="486" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="F1" selected="False" />
+            <SelectField field="Vendors Report" selected="False" />
+            <SelectField field="F3" selected="False" />
+            <SelectField field="F4" selected="False" />
+            <SelectField field="F5" selected="False" />
+            <SelectField field="F6" selected="False" />
+            <SelectField field="Vendor Name" selected="True" />
+            <SelectField field="GL Account" selected="True" />
+            <SelectField field="F7" selected="False" />
+            <SelectField field="F8" selected="True" rename="GL Name" />
+            <SelectField field="F9" selected="False" />
+            <SelectField field="F10" selected="False" />
+            <SelectField field="F11" selected="False" />
+            <SelectField field="F12" selected="True" rename="Jan PP1" />
+            <SelectField field="F13" selected="True" rename="Jan PP2" />
+            <SelectField field="F14" selected="True" rename="Feb PP3" />
+            <SelectField field="F15" selected="True" rename="Feb PP4" />
+            <SelectField field="F16" selected="True" rename="Mar PP5" />
+            <SelectField field="F17" selected="True" rename="Mar PP6" />
+            <SelectField field="F18" selected="True" rename="Apr PP7" />
+            <SelectField field="F19" selected="True" rename="Apr PP8" />
+            <SelectField field="F20" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Required Columns Selected</AnnotationText>
+          <DefaultAnnotationText>Required Columns Selected</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings>
+        <Position x="594" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">3-48</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Removed Top 2 Rows</AnnotationText>
+          <DefaultAnnotationText>Removed Top 2 Rows</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="690" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsNotNull</Operator>
+            <Field>GL Name</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2022-08-19 16:47:40</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2022-08-19 16:47:40</StartDate>
+              <EndDate>2022-08-19 16:47:40</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Remove Nulls in GL Name Column</AnnotationText>
+          <DefaultAnnotationText>!IsNull([GL Name])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="798" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="Vendor Name" />
+            <Field field="GL Account" />
+            <Field field="GL Name" />
+          </KeyFields>
+          <DataFields>
+            <Field field="Vendor Name" selected="False" />
+            <Field field="GL Account" selected="False" />
+            <Field field="GL Name" selected="False" />
+            <Field field="Jan PP1" selected="True" />
+            <Field field="Jan PP2" selected="True" />
+            <Field field="Feb PP3" selected="True" />
+            <Field field="Feb PP4" selected="True" />
+            <Field field="Mar PP5" selected="True" />
+            <Field field="Mar PP6" selected="True" />
+            <Field field="Apr PP7" selected="True" />
+            <Field field="Apr PP8" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Transpose Month Column</AnnotationText>
+          <DefaultAnnotationText>Transpose Month Column</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="906" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Name</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>Month</RootName>
+          <Delimeters value=" " />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Name Column Split</AnnotationText>
+          <DefaultAnnotationText>Name Column Split</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1002" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Vendor Name" selected="True" />
+            <SelectField field="GL Account" selected="True" />
+            <SelectField field="GL Name" selected="True" />
+            <SelectField field="Name" selected="False" />
+            <SelectField field="Month1" selected="True" rename="Month" />
+            <SelectField field="Month2" selected="True" rename="PP" />
+            <SelectField field="Value" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1110" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Value] != "0" AND
+!IsEmpty([Value])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Removed zero and Null Rows</AnnotationText>
+          <DefaultAnnotationText>[Value] != "0" AND
+!IsEmpty([Value])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="True" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Copy of New Workflow1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="483b070d-6f42-4ec5-b709-6f618ba24c42" />
+      <Telemetry>
+        <PreviousWorkflowId value="e43336ec-06e6-4663-8207-ece71767564c" />
+        <OriginWorkflowId value="e43336ec-06e6-4663-8207-ece71767564c" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
